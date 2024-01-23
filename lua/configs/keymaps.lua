@@ -12,10 +12,10 @@ local map = vim.api.nvim_set_keymap
 
 -- nomore模式 
 map("n","<leader>d","dd",opts)
-map("n","<C-h>","<C-w>h",opts)
-map("n","<C-l>","<C-w>l",opts)
-map("n","<C-j>","<C-w>j",opts)
-map("n","<C-k>","<C-w>k",opts)
+map("n","<leader>h","<C-w>h",opts)
+map("n","<leader>l","<C-w>l",opts)
+map("n","<leader>j","<C-w>j",opts)
+map("n","<leader>k","<C-w>k",opts)
 -- insert模式
 map("i","jj","<Esc>",opts)
 
