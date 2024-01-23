@@ -19,7 +19,4 @@ map("n","<C-k>","<C-w>k",opts)
 -- insert模式
 map("i","jj","<Esc>",opts)
 
--- 插件映射
--- NvimTree
-map("n","<C-b>",":NvimTreeToggle<CR>",opts)
 
