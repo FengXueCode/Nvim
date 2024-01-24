@@ -4,7 +4,7 @@ return {
 	dependencies = 'nvim-tree/nvim-web-devicons',
 	config = function()
 		vim.opt.termguicolors = true,
-		require('bufferline').setup({
+		require('bufferline').setup{
 			options = {
 				diagnostics = "nvim_lsp",
 				offsets = {{
@@ -12,8 +12,9 @@ return {
 					text = "File Explorer",
 					highlight = "Directory",
 					text_align = "left"
-				}}
+				}},
 			}
-		})
+
+		}
 	end
 }

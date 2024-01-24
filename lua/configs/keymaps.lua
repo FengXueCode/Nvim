@@ -16,7 +16,8 @@ map("n","<leader>h","<C-w>h",opts)
 map("n","<leader>l","<C-w>l",opts)
 map("n","<leader>j","<C-w>j",opts)
 map("n","<leader>k","<C-w>k",opts)
+map("n","<C-s>",":w!<CR> gg=G",opts)
 -- insert模式
 map("i","jj","<Esc>",opts)
-
+map("i","<C-s>",":w<CR>",opts)
 
