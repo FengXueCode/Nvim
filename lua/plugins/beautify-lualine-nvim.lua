@@ -4,8 +4,8 @@ return {
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'OceanicNext'
+        theme = 'gruvbox'
       }
     })end
-  }
+}
 

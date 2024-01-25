@@ -21,7 +21,7 @@ map("n","<A-j>","<C-w>j",opts)
 map("n","<A-k>","<C-w>k",opts)
 
 -- 保存（并格式化)
-map("n","<C-s>",":w!<CR> gg=G",opts)
+map("n","<C-s>",":w!<CR> gg=G <C-o>",opts)
 
 -- 左右比例控制
 map("n", "<C-Left>", ":vertical resize -2<CR>", opts)
@@ -47,6 +47,12 @@ map("n","<C-b>",":NvimTreeToggle<CR>",opts) -- 开关树
 map("n","<leader>h",":BufferLineCyclePrev<CR>",opts) -- 跳转上一个选项卡
 map("n","<leader>l",":BufferLineCycleNext<CR>",opts) -- 跳转下一个选项卡
 map("n","<C-c>o",":BufferLineCloseOthers<CR>",opts) -- 关闭其他选项卡
-
+map("n","<C-c>w",":bd<CR>",opts) -- 关闭当前选项卡
 -- NvimTreesitter
-map("n","<C-A-l>","gg=G",opts) -- 格式化代码
+map("n","<C-A-l>","gg=G <C-o>",opts) -- 格式化代码
+
+-- telescope
+map("n","<leader>ff",":Telescope find_files<CR> ",opts)
+map("n","<leader>fg",":Telescope live_grep<CR>",opts)
+map("n","<leader>fb",":Telescope buffers<CR>",opts)
+map("n","<leader>fh",":Telescope help_tags<CR>",opts)
