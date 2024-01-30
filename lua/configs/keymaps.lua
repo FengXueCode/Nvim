@@ -35,9 +35,10 @@ map("n", "<C-Down>", ":resize +2<CR>", opts)
 map("n", "<C-Up>", ":resize -2<CR>", opts)
 -- 等比例
 map("n", "s=", "<C-w>=", opts)
+
 -- insert模式
 map("i","jj","<Esc>",opts)
-map("i","<C-s>",":w!<CR>",opts)
+map("i","<C-s>","<Esc> :w! <CR>",opts)
 
 -- 插件映射
 -- NvimTree
@@ -52,7 +53,10 @@ map("n","<C-c>w",":bd<CR>",opts) -- 关闭当前选项卡
 map("n","<C-A-l>","gg=G <C-o>",opts) -- 格式化代码
 
 -- telescope
-map("n","<leader>ff",":Telescope find_files<CR> ",opts)
-map("n","<leader>fg",":Telescope live_grep<CR>",opts)
-map("n","<leader>fb",":Telescope buffers<CR>",opts)
-map("n","<leader>fh",":Telescope help_tags<CR>",opts)
+map("n","<leader>ff",":Telescope find_files<CR>",opts) -- 查找文件
+map("n","<leader>fg",":Telescope live_grep<CR>",opts)  -- 搜索代码
+map("n","<leader>fb",":Telescope buffers<CR>",opts) -- 搜索缓冲区
+map("n","<leader>fh",":Telescope help_tags<CR>",opts) -- 帮助
+map("n","<leader>q",":Telescope oldfiles<CR>",opts) -- 查找旧文件
+map("n","<leader>rs",":Telescope resume<CR>",opts) -- 恢复上次搜索列表
+
