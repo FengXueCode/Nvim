@@ -20,7 +20,7 @@ map("n", "<A-j>", "<C-w>j", opts)
 map("n", "<A-k>", "<C-w>k", opts)
 
 -- 保存
-map("n", "<C-s>", ":w!<CR>",opts)
+map("n", "<C-s>", ":w!<CR>", opts)
 
 -- 左右比例控制
 map("n", "<C-Left>", ":vertical resize -2<CR>", opts)
@@ -58,3 +58,18 @@ map("n", "<leader>fh", ":Telescope help_tags<CR>", opts)  -- 帮助
 map("n", "<leader>q", ":Telescope oldfiles<CR>", opts)    -- 查找旧文件
 map("n", "<leader>rs", ":Telescope resume<CR>", opts)     -- 恢复上次搜索列表
 
+
+-- lsp快捷键设置
+map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)  -- 重命名
+-- 文件跳转
+map("n", "gd", "<cmd>lua  vim.lsp.buf.definition()<CR>", opts)     -- 跳转函数定义
+map("n", "gD", "<cmd>lua  vim.lsp.buf.declaration()<CR>", opts)    -- 跳转函数定义
+map("n", "gh", "<cmd>lua  vim.lsp.buf.hover()<CR>", opts)          -- 文档提示
+map("n", "gi", "<cmd>lua  vim.lsp.buf.implementation()<CR>", opts) -- 定位当前代码
+map("n", "gr", "<cmd>lua  vim.lsp.buf.references()<CR>", opts)     -- 查找所有引用
+
+
+map("n", "<C-A-l>", "<cmd> lua vim.lsp.buf.format()<CR>", opts)                     -- 格式化代码
+map("n", "<leader>ca", "<cmd> lua vim.lsp.buf.code_action()<CR>", opts)             -- 查看可用代码操作
+map("n", "<leader>wa", "<cmd> lua vim.lsp.buf.add_workspace_folder()<CR>", opts)    -- 添加文件夹到当前工作区
+map("n", "<leader>wr", "<cmd> lua vim.lsp.buf.remove_workspace_folder()<CR>", opts) -- 从当前工作区删除指定文件夹
