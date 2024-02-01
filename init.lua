@@ -10,4 +10,3 @@ require("configs.lsp.setup")
 require("configs.lsp.nvim-cmp")
 
 
-

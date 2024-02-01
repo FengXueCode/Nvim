@@ -22,7 +22,7 @@ vim.opt.expandtab = true
 vim.o.shiftround = true
 vim.o.shiftwidth = 2
 -- 1 个 tab 显示为 2 个空格
-vim.opt.tabstop = 2
+-- vim.opt.tabstop = 2
 vim.opt.tabstop = 2
 -- INSERT 模式下 1 个 tab 代表 2 个空格
 vim.opt.softtabstop = 2

@@ -1,3 +1,4 @@
+
 vim.opt.termguicolors = true -- 真色彩模式
 local colorscheme = "gruvbox"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

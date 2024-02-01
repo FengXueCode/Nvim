@@ -24,7 +24,7 @@ local on_attach = function(client, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)                    -- 跳转函数定义
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)                     -- 跳转函数定义
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)                           -- 文档提示
+  vim.keymap.set('n', 'gh', vim.lsp.buf.hover, bufopts)                           -- 文档提示
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)                 -- 定位当前代码
   vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)              -- 显示函数签名和参数
   vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)    --添加指定文件夹到当前工作区
@@ -34,7 +34,7 @@ local on_attach = function(client, bufnr)
   end, bufopts)                                                         -- 打印当前工作目录
   vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts) -- 查找类型定义
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)         -- 重命名当前变量
-  vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)    -- 查找可用的代码操作
+  vim.keymap.set('n', '<A-CR>', vim.lsp.buf.code_action, bufopts)    -- 查找可用的代码操作
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)            -- 查找符号的引用
   vim.keymap.set("n", "<C-A-l>", function()
     vim.lsp.buf.format({ async = true })
