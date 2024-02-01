@@ -7,5 +7,7 @@ require("configs.colorscheme") -- 主题设置
 require("configs.plugin-configs.nvim-treesitter")
 require("configs.plugin-configs.nvim-tree")
 require("configs.lsp.setup")
+require("configs.lsp.nvim-cmp")
+
 
 

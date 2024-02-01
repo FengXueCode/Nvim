@@ -1,8 +1,9 @@
+---@diagnostic disable: undefined-global
 -- 使用 utf8编码
 vim.g.encoding = "utf-8"
 vim.o.fileencoding = "utf-8"
 -- 禁止折行显示文本
-vim.o.wrap = false
+vim.o.wrap = true
 -- 光标移动的时候始终上下左右保持8个空格
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
