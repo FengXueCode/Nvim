@@ -39,3 +39,5 @@ vim.g.incsearch = true
 -- 把空格显示成一个点
 vim.o.list = true
 vim.o.listchars = "space:·"
+-- 关闭通知
+vim.g.lazy_nvim_disable_reload_notification = true

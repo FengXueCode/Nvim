@@ -1,5 +1,5 @@
-return  {
-  'nvim-treesitter/nvim-treesitter',
-  run = ':TSUpdate'
+-- 代码高亮
+return {
+  "nvim-treesitter/nvim-treesitter",
+  run = ":TSUpdate"
 }
-

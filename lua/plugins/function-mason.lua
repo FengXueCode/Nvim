@@ -1,3 +1,4 @@
+-- lsp安装插件
 return {
   "williamboman/mason.nvim",
   build = ":MonsionUpdate",
@@ -5,7 +6,6 @@ return {
   config = function()
     require("mason").setup()
     require("mason-lspconfig").setup()
-
   end,
   dependencies = {
     "williamboman/mason-lspconfig.nvim"
