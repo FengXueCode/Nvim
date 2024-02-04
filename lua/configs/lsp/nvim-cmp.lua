@@ -72,15 +72,15 @@ cmp.setup(
       end
     },
     -- 在 命令行/模式下启动补全
-    cmp.setup.cmdline(
-      "/",
-      {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = {
-          {name = "buffer"}
-        }
-      }
-    ),
+    -- cmp.setup.cmdline(
+    --  "/",
+    -- {
+    --  mapping = cmp.mapping.preset.cmdline(),
+    -- sources = {
+    --  {name = "buffer"}
+    -- }
+    --}
+    --),
     -- 在 命令行:模式下启动补全
     cmp.setup.cmdline(
       ":",
