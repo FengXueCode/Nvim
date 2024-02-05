@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- 检测光标前面是否有单词
 local has_words_before = function()
   unpack = unpack or table.unpack
@@ -13,7 +14,7 @@ cmp.setup(
   {
     snippet = {
       -- REQUIRED - you must specify a snippet engine
-      -- 指定代码片段引擎
+      -- 指定代码片段引
       expand = function(args)
         require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
       end

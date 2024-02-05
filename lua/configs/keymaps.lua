@@ -8,6 +8,8 @@ local map = vim.api.nvim_set_keymap
 -- nomore模式
 -- 删除一行
 map("n", "<leader>d", "dd", opts)
+-- 保存
+map("n", "<C-s>", ":w!<CR>", opts)
 
 -- 控制窗口跳转
 map("n", "<A-h>", "<C-w>h", opts)
@@ -15,19 +17,18 @@ map("n", "<A-l>", "<C-w>l", opts)
 map("n", "<A-j>", "<C-w>j", opts)
 map("n", "<A-k>", "<C-w>k", opts)
 
--- 保存
-map("n", "<C-s>", ":w!<CR>", opts)
-
 -- 左右比例控制
 map("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 map("n", "s,", ":vertical resize -20<CR>", opts)
 map("n", "s.", ":vertical resize +20<CR>", opts)
+
 -- 上下比例
 map("n", "sj", ":resize +10<CR>", opts)
 map("n", "sk", ":resize -10<CR>", opts)
 map("n", "<C-Down>", ":resize +2<CR>", opts)
 map("n", "<C-Up>", ":resize -2<CR>", opts)
+
 -- 等比例
 map("n", "s=", "<C-w>=", opts)
 
@@ -52,6 +53,12 @@ map("n", "<leader>fb", ":Telescope buffers<CR>", opts) -- 搜索缓冲区
 map("n", "<leader>fh", ":Telescope help_tags<CR>", opts) -- 帮助
 map("n", "<leader>q", ":Telescope oldfiles<CR>", opts) -- 查找旧文件
 map("n", "<leader>rs", ":Telescope resume<CR>", opts) -- 恢复上次搜索列表
+
+-- trouble
+map("n", "<leader>xx", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
+map("n", "<leader>xX", "<cmd>TroubleToggle workspace_diagnostics<CR>", opts)
+map("n", "<leader>xl", "<cmd>TroubleToggle loclist<CR>", opts)
+map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<CR>", opts)
 
 -- lsp快捷键设置
 map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts) -- 重命名

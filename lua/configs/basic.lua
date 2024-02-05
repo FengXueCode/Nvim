@@ -11,7 +11,8 @@ vim.o.sidescrolloff = 8
 vim.o.number = true
 vim.o.relativenumber = true -- 相对行号
 -- 左侧图标列
-vim.wo.signcolumn = "yes"
+--vim.wo.signcolumn = "yes"
+
 -- 右侧参考列
 --vim.wo.colorcolumn = 80
 -- 高亮显示光标所在行

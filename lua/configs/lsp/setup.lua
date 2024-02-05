@@ -15,7 +15,15 @@ require("mason").setup(
 require("mason-lspconfig").setup(
   {
     -- A list of servers to automatically install if they're not already installed
-    ensure_installed = {"html", "jsonls", "lua_ls", "tsserver", "volar"}
+    ensufe_installed = {
+      "html",
+      "jsonls",
+      "lua_ls",
+      "tsserver",
+      "volar",
+      "stylelint",
+      "stylelint_lsp"
+    }
   }
 )
 
@@ -26,3 +34,4 @@ lspconfig.jsonls.setup({}) -- JSON
 lspconfig.lua_ls.setup({}) -- lua
 lspconfig.tsserver.setup({}) -- TS
 lspconfig.volar.setup({}) -- Vue
+lspconfig.stylelint_lsp.setup({}) -- Css
