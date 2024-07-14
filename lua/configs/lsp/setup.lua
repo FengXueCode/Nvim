@@ -22,7 +22,8 @@ require("mason-lspconfig").setup(
       "tsserver",
       "volar",
       "stylelint",
-      "stylelint_lsp"
+      "stylelint_lsp",
+      "prettierd"
     }
   }
 )

@@ -73,3 +73,15 @@ map("n", "<C-A-l>", "<cmd> lua vim.lsp.buf.format()<CR>", opts) -- 格式化代�
 map("n", "<leader>ca", "<cmd> lua vim.lsp.buf.code_action()<CR>", opts) -- 查看可用代码操作
 map("n", "<leader>wa", "<cmd> lua vim.lsp.buf.add_workspace_folder()<CR>", opts) -- 添加文件夹到当前工作区
 map("n", "<leader>wr", "<cmd> lua vim.lsp.buf.remove_workspace_folder()<CR>", opts) -- 从当前工作区删除指定文件夹
+
+-- luasnip
+local ls = require("luasnip")
+vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true}) -- 展开
+vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true}) -- 光标跳转上一条
+vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true}) -- 光标跳转下一条
+
+vim.keymap.set({"i", "s"}, "<C-E>", function()--更改活动选择
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
+end, {silent = true})
