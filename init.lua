@@ -8,5 +8,3 @@ require("configs.plugin-configs.nvim-tree")
 require("configs.plugin-configs.formatter")
 require("configs.lsp.setup")
 require("configs.lsp.nvim-cmp")
-
-
