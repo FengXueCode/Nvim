@@ -6,6 +6,7 @@ return {
   -- install jsregexp (optional!).
   build = "make install_jsregexp",
   config = function()
-    require("configs.snip-configs.test")
+    require("snippets.common")
+    require("snippets.vue")
   end
 }

@@ -16,8 +16,28 @@ local m = extras.m
 local l = extras.l
 local postfix = require "luasnip.extras.postfix".postfix
 
-ls.add_snippets("all",{
-  s("hw",{
-   t("hello,world!")
-  })
-})
+ls.add_snippets(
+  "all",
+  {
+    -- console.log()
+    s(
+      "log",
+      {
+        t("console.log('"),
+        i(1, "describe"),
+        t("',"),
+        i(2, "content"),
+        t(")")
+      }
+    ),
+    -- 提示
+    s(
+      "tt",
+      {
+        t("//----------------------<"),
+        i(1, "tip-title"),
+        t(">----------------------")
+      }
+    )
+  }
+)
