@@ -55,10 +55,10 @@ map("n", "<leader>q", ":Telescope oldfiles<CR>", opts) -- 查找旧文件
 map("n", "<leader>rs", ":Telescope resume<CR>", opts) -- 恢复上次搜索列表
 
 -- trouble
-map("n", "<leader>xx", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
-map("n", "<leader>xX", "<cmd>TroubleToggle workspace_diagnostics<CR>", opts)
-map("n", "<leader>xl", "<cmd>TroubleToggle loclist<CR>", opts)
-map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<CR>", opts)
+map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", opts)
+map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", opts)
+map("n", "<leader>xl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", opts)
+map("n", "<leader>xq", "<cmd>Trouble qflist toggle<cr>", opts)
 
 -- lsp快捷键设置
 map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts) -- 重命名

@@ -12,7 +12,8 @@ require "nvim-treesitter.configs".setup {
     "scss",
     "json",
     "markdown",
-    "markdown_inline"
+    "markdown_inline",
+    "vue"
   },
   -- 启用代码高亮功能
   highlight = {

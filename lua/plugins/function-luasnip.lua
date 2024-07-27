@@ -8,5 +8,6 @@ return {
   config = function()
     require("snippets.common")
     require("snippets.vue")
+    require("snippets.request")
   end
 }
